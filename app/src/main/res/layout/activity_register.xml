@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_join_association"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.lastfighting.association.association.RegisterActivity"
+    android:background="@drawable/bg"
+    android:weightSum="1">
+    <!-- Login progress -->
+    <ScrollView
+        android:id="@+id/register_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/email_register_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/rEmail"
+                android:layout_weight="0.0"
+                android:hint="邮箱" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/rPassword"
+                android:layout_weight="0.0"
+                android:hint="密码" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/rPasswordR"
+                android:layout_weight="0.0"
+                android:hint="重复密码"
+                android:elevation="0dp" />
+
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:id="@+id/rradioSex"
+                android:contentDescription="性别"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="男"
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rSexMan"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:text="女"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rSexWomen"
+                    android:elevation="1dp"
+                    android:layout_width="137dp" />
+            </RadioGroup>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/rName"
+                android:layout_weight="0.0"
+                android:hint="姓名" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/rPhone"
+                android:layout_weight="0.0"
+                android:hint="手机"
+                android:elevation="0dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="广东科技学院"
+                android:ems="10"
+                android:id="@+id/rSchool"
+                android:layout_weight="0.0"
+                android:hint="学校" />
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:id="@+id/rradioIdentity"
+                android:contentDescription="身份"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:text="我是社员"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rradioMember"
+                    android:elevation="0dp"
+                    android:layout_width="164dp"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:text="我是社长"
+                    android:layout_width="123dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rradioLeader" />
+
+            </RadioGroup>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/association_list"
+                android:layout_weight="0.0" />
+
+            <Button
+                android:text="注册"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/rRegister"
+                android:layout_above="@+id/President"
+                android:layout_centerHorizontal="true"
+                android:elevation="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/background_light"
+                android:background="@android:color/holo_blue_dark"
+                android:layout_weight="0.0" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/register_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+</LinearLayout>
